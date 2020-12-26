@@ -1,0 +1,22 @@
+{
+	"name": "dahmen/automad-halfmoon",
+	"description": "A customizable documentation and blog theme based on the Halfmoon framework with a built-in dark and light mode",
+	"type": "automad-package",
+	"keywords": [
+		"theme",
+		"documentation",
+		"blog",
+		"halfmoon"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Marc Anton Dahmen",
+			"homepage": "https://marcdahmen.de"
+		}
+	],
+	"require": {
+		"automad/package-installer": "^1.1 || dev-master",
+		"automad/meta-tags": "^1.1 || dev-master"
+	}
+}
