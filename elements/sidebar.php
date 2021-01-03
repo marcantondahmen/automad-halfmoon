@@ -28,22 +28,28 @@
 					<@~ link @>
 				<@~ end @>
 			<@~ end ~@>
-			<div class="sidebar-divider my-15"></div>
 		<@~ end @>
 		<# Siblings #>
 		<@~ newPagelist {
 			type: 'siblings',
 			excludeCurrent: false
 		} @>
-		<@~ foreach in pagelist @>
-			<@~ link @>
-		<@~ end @>
+		<@ if @{ :level } @>
+			<@ if @{ :level } > 1 @>
+				<div class="sidebar-divider my-15"></div>
+			<@ end @>
+			<@~ foreach in pagelist @>
+				<@~ link @>
+			<@~ end @>
+		<@ end @>
 		<# Children #>
 		<@~ newPagelist {
 			type: 'children'
 		} @>
 		<@~ if @{ :pagelistCount } @>
-			<div class="sidebar-divider my-15"></div>
+			<@ if @{ :level } @>
+				<div class="sidebar-divider my-15"></div>
+			<@ end @>
 			<@~ foreach in pagelist @>
 				<@~ link @>
 			<@~ end @>
