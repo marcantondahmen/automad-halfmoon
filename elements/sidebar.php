@@ -16,7 +16,7 @@
 		<@ end @>
 	</a>
 <@~ end ~@>
-<div class="sidebar py-5">
+<div class="sidebar py-10">
 	<div class="sidebar-menu">
 		<# Breadcrumbs #>
 		<@~ newPagelist {
