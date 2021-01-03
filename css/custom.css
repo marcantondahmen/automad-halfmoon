@@ -1,0 +1,92 @@
+:root {
+
+	--base-html-font-size: 72%; 
+	--base-html-font-size-1600: 80%; 
+	--base-html-font-size-1920: 88%;
+
+	--container-sm-max-width: 96rem;
+	--container-md-max-width: 96rem;
+	--container-lg-max-width: 108rem;
+	--container-xl-max-width: 108rem;
+
+	--navbar-brand-font-size: 1.4rem;
+	--navbar-brand-font-weight: 700;
+	--sidebar-width: 24rem;
+
+	--blocks-padding: 2.5rem;
+	--cards-margin: 0.75rem;
+
+}
+
+.blocks {
+	padding: 0 2.5rem
+}
+
+.blocks > * {
+	max-width: 54rem;
+	margin: 1.5rem auto;
+}
+
+.blocks > .am-stretched,
+.blocks > figure,
+.blocks > form,
+.blocks > section {
+	margin: 3rem auto; 
+}
+
+.blocks > .am-stretched {
+	width: calc(100% + (2 * var(--blocks-padding))) !important;
+	max-width: calc(100% + (2 * var(--blocks-padding))) !important;
+	margin-left: calc(-1 * var(--blocks-padding));
+	margin-right: calc(-1 * var(--blocks-padding));
+}
+
+.blocks .cards .row {
+	margin: calc(-1 * var(--cards-margin));
+}
+
+.blocks .cards.am-stretched .row {
+	margin: calc(-1 * var(--cards-margin)) calc(var(--blocks-padding) - var(--cards-margin));
+}
+
+.blocks .cards .card,
+.blocks .cards .alert {
+	box-sizing: border-box;
+	margin: var(--cards-margin);
+	max-width: calc(100% - (2 * var(--cards-margin)));
+}
+
+.blocks img {
+	max-width: 100%;
+	min-width: 100%;
+	height: auto;
+}
+
+.card-teaser {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	color: inherit !important;
+	background-color: rgba(128,128,128,0.05);
+}
+
+.card-teaser img,
+.card-teaser svg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	min-width: 100%;
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card-teaser svg {
+	color: inherit;
+	padding: 0 40%;
+	opacity: 0.1;
+}
+
+.am-paragraph-large {
+	font-size: 135%;
+}

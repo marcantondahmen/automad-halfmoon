@@ -1,0 +1,1 @@
+@{ date | dateFormat (@{ formatDate | def ('l, F jS Y')}, @{ locale }) }
