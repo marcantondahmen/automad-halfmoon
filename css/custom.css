@@ -90,3 +90,25 @@
 .am-paragraph-large {
 	font-size: 135%;
 }
+
+.am-inpage-edit-button {
+	font-size: 12.6px !important;
+	line-height: 26px !important;
+	padding: 0 10px !important;
+}
+
+.am-inpage-menu-button {
+	font-size: 18px;
+	line-height: 43px;
+	height: 45px;
+	min-width: 47px;
+}
+
+.am-logo {
+	width: 19px !important;
+	height: 22px !important;
+}
+
+.am-inpage-menu-button[href^="/"] {
+	color: #181818 !important;
+}
