@@ -1,5 +1,6 @@
 <div class="blocks">
-	<footer class="my-20 py-20">
+	<@ prev_next.php @>
+	<footer class="my-20 py-10">
 		<hr class="my-20">
 		<@ if @{ :level } @>
 			<@ newPagelist { type: 'breadcrumbs' } @>
