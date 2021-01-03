@@ -6,8 +6,8 @@
 
 	--container-sm-max-width: 96rem;
 	--container-md-max-width: 96rem;
-	--container-lg-max-width: 108rem;
-	--container-xl-max-width: 108rem;
+	--container-lg-max-width: 102rem;
+	--container-xl-max-width: 102rem;
 
 	--navbar-brand-font-size: 1.4rem;
 	--navbar-brand-font-weight: 700;
@@ -23,7 +23,7 @@
 }
 
 .blocks > * {
-	max-width: 54rem;
+	max-width: 58rem;
 	margin: 1.5rem auto;
 }
 
