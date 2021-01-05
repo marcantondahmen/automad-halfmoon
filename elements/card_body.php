@@ -7,7 +7,13 @@
 		<@ if @{ date } and @{ tags } @>
 			<br>
 		<@ end @>
-		<@ tags.php @>
+		<@ foreach in tags ~@>
+			<@~ if @{ :i } > 1 @>,<@ end @>
+			<a 
+			href="?filter=@{ :tag }" 
+			class="text-reset"
+			>@{ :tag }</a>
+		<@~ end @>
 	</p>
 <@ end @>
 <p class="px-20 m-0 py-0 flex-grow-1">@{ +main | findFirstParagraph | 160 }</p>
