@@ -6,12 +6,21 @@
 		<@ newPagelist { type: 'children' } @>
 		<@ if @{ :pagelistCount } @>
 			<span>
-				<@ Automad/Bootstrap/Icon {
-					icon: 'chevron-right',
-					w: '0.9em',
-					h: '0.9em',
-					viewBox: '0 -2 16 16'
-				} @>
+				<@ if @{ :currentPath } and not @{ :current } @>
+					<@ Automad/Bootstrap/Icon {
+						icon: 'chevron-up',
+						w: '0.9em',
+						h: '0.9em',
+						viewBox: '0 -2 16 16'
+					} @>
+				<@ else @>
+					<@ Automad/Bootstrap/Icon {
+						icon: 'chevron-right',
+						w: '0.9em',
+						h: '0.9em',
+						viewBox: '0 -2 16 16'
+					} @>
+				<@ end @>
 			</span>
 		<@ end @>
 	</a>
