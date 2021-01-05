@@ -21,7 +21,7 @@ Expose variable to dashboard.
 <@ end @>
 <@ with @{ urlActionButtonTargetPage } @>
 	<div class="navbar-content d-none d-md-flex ml-0">
-		<a href="@{ url }" class="btn btn-primary">@{ title }</a>
+		<a href="@{ url }" class="btn @{ actionButtonClass | def ('btn-primary') }">@{ title }</a>
 	</div>
 <@ end @>
 <ul class="navbar-nav d-none d-md-flex ml-0 mr-0">
@@ -59,7 +59,7 @@ Expose variable to dashboard.
 			<@ end @>
 			<@ with @{ urlActionButtonTargetPage } @>
 				<div class="dropdown-content">
-					<a href="@{ url }" class="btn btn-primary w-full">@{ title }</a>
+					<a href="@{ url }" class="btn @{ actionButtonClass | def ('btn-primary') } w-full">@{ title }</a>
 				</div>
 			<@ end @>
 			<div class="dropdown-divider my-10"></div>
