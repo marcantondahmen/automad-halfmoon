@@ -7,7 +7,7 @@
 		<@ elements/navbar.php @>
 		<@ elements/sidebar.php @>
 		<div class="content-wrapper">
-			<div class="container py-20">
+			<div class="container pt-10 pb-20">
 				<@ elements/content.php @>
 				<# Paglist config #>
 				<@~ newPagelist { 
@@ -31,7 +31,7 @@
 						search: @{ ?search }
 					} @>
 				<@~ end ~@>
-				<div class="blocks">
+				<div id="filters" class="blocks pt-10">
 					<# Filters #>
 					<section>
 						<div class="dropdown">
@@ -58,14 +58,14 @@
 							</button>
 							<div class="dropdown-menu" aria-labelledby="dropdown-filter">
 								<a 
-								href="?<@ queryStringMerge { filter: false, page: 1 } @>" 
+								href="?<@ queryStringMerge { filter: false, page: 1 } @>#filters" 
 								class="dropdown-item<@ if not @{ ?filter } @> bg-primary text-light<@ end @>"
 								>
 									@{ labelShowAll | def ('Show All') }
 								</a>
 								<@ foreach in filters @>
 									<a 
-									href="?<@ queryStringMerge { filter: @{ :filter }, page: 1 } @>" 
+									href="?<@ queryStringMerge { filter: @{ :filter }, page: 1 } @>#filters" 
 									class="dropdown-item<@ if @{ :filter } = @{ ?filter } @> bg-primary text-light<@ end @>"
 									>
 										@{ :filter }
@@ -75,7 +75,7 @@
 						</div>
 						<@ if @{ ?search } @>
 							<a 
-							href="?<@ queryStringMerge { search: false } @>" 
+							href="?<@ queryStringMerge { search: false } @>#filters" 
 							class="btn"
 							>
 								"@{ ?search }"&nbsp;&nbsp;✗
