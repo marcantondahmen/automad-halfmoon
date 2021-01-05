@@ -7,7 +7,7 @@
 		<@ elements/navbar.php @>
 		<@ elements/sidebar.php @>
 		<div class="content-wrapper">
-			<div class="container pt-10 pb-20">
+			<div class="container py-20">
 				<@ elements/content.php @>
 				<# Paglist config #>
 				<@~ newPagelist { 
@@ -31,9 +31,9 @@
 						search: @{ ?search }
 					} @>
 				<@~ end ~@>
-				<div id="filters" class="blocks pt-10">
+				<div class="blocks">
 					<# Filters #>
-					<section>
+					<section id="filters">
 						<div class="dropdown">
 							<button 
 							class="btn" 
