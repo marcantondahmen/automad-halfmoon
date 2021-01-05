@@ -4,6 +4,7 @@
 	<# 
 	Make block variables show up in Dashboard:
 	@{ cardImageRelativeHeight }
+	@{ imageTeaser }
 	#>
 	<@ set {
 		:tagTitle: @{ metaTitle | def("@{ sitename } / @{ title | def('404') }") },
