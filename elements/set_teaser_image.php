@@ -5,5 +5,5 @@
 	<@ set { :imageTeaser: @{ :fileResized } } @>
 <@~ else ~@>
 	<# Else try to get first image from content. #>
-	<@ set { :imageTeaser: @{ +main | findFirstImage } } @>
+	<@ set { :imageTeaser: @{ imageTeaser | def (@{ +main | findFirstImage }) } } @>
 <@~ end ~@>
