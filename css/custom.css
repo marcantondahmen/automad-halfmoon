@@ -9,6 +9,9 @@
 	--container-lg-max-width: 102rem;
 	--container-xl-max-width: 102rem;
 
+	--navbar-horizontal-padding: 1.5rem;
+	--navbar-content-horizontal-margin: 1.5rem;
+
 	--navbar-brand-font-size: 1.4rem;
 	--navbar-brand-font-weight: 700;
 	--sidebar-width: 24rem;
