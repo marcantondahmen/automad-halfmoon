@@ -14,17 +14,17 @@ Expose variable to dashboard.
 	<@ end @>
 </ul>
 <@ with @{ urlSearchResults } @>
-	<form class="form-inline d-none d-md-flex mr-5 w-250" action="@{ url }">
+	<form class="form-inline d-none d-md-flex w-250" action="@{ url }">
 		<@ search.php @>
 		<@ datalist.php @>
 	</form>
 <@ end @>
 <@ with @{ urlActionButtonTargetPage } @>
-	<div class="navbar-content d-none d-md-flex ml-0">
+	<div class="navbar-content d-none d-md-flex">
 		<a href="@{ url }" class="btn @{ actionButtonClass | def ('btn-primary') }">@{ title }</a>
 	</div>
 <@ end @>
-<ul class="navbar-nav d-none d-md-flex ml-0 mr-0">
+<ul class="navbar-nav d-none d-md-flex mr-0">
 	<li class="nav-item">
 		<a 
 		class="nav-link pr-5"
@@ -37,7 +37,7 @@ Expose variable to dashboard.
 <div class="navbar-nav d-md-none ml-auto">
 	<li class="nav-item dropdown with-arrow">
 		<a
-		class="nav-link" 
+		class="nav-link pr-5" 
 		data-toggle="dropdown" 
 		id="navbar-dropdown"
 		>
