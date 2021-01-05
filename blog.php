@@ -36,7 +36,7 @@
 					<section>
 						<div class="dropdown">
 							<button 
-							class="btn btn-primary" 
+							class="btn" 
 							data-toggle="dropdown" 
 							type="button" 
 							id="dropdown-filter" 
