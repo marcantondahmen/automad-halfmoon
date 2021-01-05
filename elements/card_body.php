@@ -11,6 +11,6 @@
 	</p>
 <@ end @>
 <p class="px-20 m-0 py-0 flex-grow-1">@{ +main | findFirstParagraph | 160 }</p>
-<div class="p-20 mt-5 text-right">
-	<a href="@{ url }" class="btn">@{ labelMore | def ('More') }</a>
+<div class="p-20">
+	<a href="@{ url }" class="btn btn-sm">@{ labelMore | def ('More') }</a>
 </div>
