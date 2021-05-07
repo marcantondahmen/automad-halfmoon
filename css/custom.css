@@ -3,7 +3,7 @@
 	--am-block-max-width: 60rem;
 	--am-block-margin-top: calc(1rem + 1em);
 	--am-container-padding: 1.5rem;
-	--am-flex-gap: 1.5rem;
+	--am-flex-gap: 2rem;
 	--am-flex-min-block-width: 18rem;
 
 	--base-html-font-size: 80%; 
@@ -23,7 +23,7 @@
 	--navbar-brand-font-weight: 700;
 	--sidebar-width: 24rem;
 
-	--cards-margin: 0.75rem; 
+	--cards-margin: 1rem; 
 
 }
 
@@ -43,6 +43,10 @@ am-stretched + am-stretched {
 
 img {
 	max-width: 100%;
+}
+
+.cards {
+	margin-top: var(--am-block-margin-top);
 }
 
 .cards .row {
