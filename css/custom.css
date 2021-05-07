@@ -1,72 +1,59 @@
 :root {
 
-	--base-html-font-size: 72%; 
-	--base-html-font-size-1600: 80%; 
-	--base-html-font-size-1920: 88%;
+	--am-block-max-width: 60rem;
+	--am-block-margin-top: calc(1rem + 1em);
+	--am-container-padding: 1.5rem;
+	--am-flex-gap: 1.5rem;
+	--am-flex-min-block-width: 18rem;
 
-	--container-sm-max-width: 96rem;
-	--container-md-max-width: 96rem;
-	--container-lg-max-width: 102rem;
-	--container-xl-max-width: 102rem;
+	--base-html-font-size: 80%; 
+	--base-html-font-size-1600: 90%; 
+	--base-html-font-size-1920: 100%;
 
-	--navbar-horizontal-padding: 1.5rem;
-	--navbar-content-horizontal-margin: 1.5rem;
+	--container-width: 100%;
+	--container-sm-max-width: 100%;
+	--container-md-max-width: 100%;
+	--container-lg-max-width: 100%;
+	--container-xl-max-width: 112rem;
+
+	--navbar-horizontal-padding: var(--am-container-padding);
+	--navbar-content-horizontal-margin: var(--am-container-padding);
 
 	--navbar-brand-font-size: 1.4rem;
 	--navbar-brand-font-weight: 700;
 	--sidebar-width: 24rem;
 
-	--blocks-padding: 2.5rem;
-	--cards-margin: 0.75rem;
+	--cards-margin: 0.75rem; 
 
+}
+
+am-stretched + am-stretched {
+	margin-top: var(--am-block-margin-top);
+}
+
+.container {
+	box-sizing: border-box;
+	padding-left: var(--am-container-padding);
+	padding-right: var(--am-container-padding);
 }
 
 #filters {
 	padding-top: 0.5rem;
 }
 
-.blocks {
-	padding: 0 2.5rem
+img {
+	max-width: 100%;
 }
 
-.blocks > * {
-	max-width: 64rem;
-	margin: 1.5rem auto;
-}
-
-.blocks > .am-stretched,
-.blocks > figure,
-.blocks > form,
-.blocks > section {
-	margin: 3rem auto; 
-}
-
-.blocks > .am-stretched {
-	width: calc(100% + (2 * var(--blocks-padding))) !important;
-	max-width: calc(100% + (2 * var(--blocks-padding))) !important;
-	margin-left: calc(-1 * var(--blocks-padding));
-	margin-right: calc(-1 * var(--blocks-padding));
-}
-
-.blocks .cards .row {
+.cards .row {
 	margin: calc(-1 * var(--cards-margin));
 }
 
-.blocks .cards.am-stretched .row {
-	margin: calc(-1 * var(--cards-margin)) calc(var(--blocks-padding) - var(--cards-margin));
-}
-
-.blocks .cards .card,
-.blocks .cards .alert {
+.cards .card,
+.cards .alert {
 	box-sizing: border-box;
 	margin: var(--cards-margin);
 	max-width: calc(100% - (2 * var(--cards-margin)));
-}
-
-.blocks img {
-	max-width: 100%;
-	min-width: 100%;
-	height: auto;
 }
 
 .card-teaser {
@@ -92,10 +79,6 @@
 	color: inherit;
 	padding: 0 40%;
 	opacity: 0.1;
-}
-
-.am-paragraph-large {
-	font-size: 135%;
 }
 
 .am-inpage-edit-button {

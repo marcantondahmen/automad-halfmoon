@@ -16,5 +16,11 @@
 		});
 
 	});
+
+	if (halfmoon.getPreferredMode() === 'not-set') {
+		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			halfmoon.createCookie('halfmoon_preferredMode', 'dark-mode', 1);
+		}
+	}
 	
 }();

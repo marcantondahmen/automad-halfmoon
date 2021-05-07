@@ -6,7 +6,7 @@
 		<div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
 		<@ elements/navbar.php @>
 		<@ elements/sidebar.php @>
-		<div class="content-wrapper">
+		<div class="content-wrapper pt-10">
 			<div class="container py-20">
 				<@ elements/content.php @>
 				<# Paglist config #>
@@ -31,95 +31,94 @@
 						search: @{ ?search }
 					} @>
 				<@~ end ~@>
-				<div class="blocks">
-					<# Filters #>
-					<section id="filters">
-						<div class="dropdown">
-							<button 
-							class="btn" 
-							data-toggle="dropdown" 
-							type="button" 
-							id="dropdown-filter" 
-							aria-haspopup="true" 
-							aria-expanded="false"
-							>
-								<@~ if @{ ?filter } ~@>
-									@{ ?filter }
-								<@~ else ~@>
-									@{ labelShowAll | def ('Show All') }
-								<@~ end ~@>
-								&nbsp;
-								<@ Automad/Bootstrap/Icon { 
-									icon: 'filter',
-									w: '1.0em',
-									h: '1.0em',
-									viewBox: '0 -2 14 16'
-								} @>
-							</button>
-							<div class="dropdown-menu" aria-labelledby="dropdown-filter">
-								<a 
-								href="?<@ queryStringMerge { filter: false, page: 1 } @>#filters" 
-								class="dropdown-item<@ if not @{ ?filter } @> bg-primary text-light<@ end @>"
-								>
-									@{ labelShowAll | def ('Show All') }
-								</a>
-								<@ foreach in filters @>
-									<a 
-									href="?<@ queryStringMerge { filter: @{ :filter }, page: 1 } @>#filters" 
-									class="dropdown-item<@ if @{ :filter } = @{ ?filter } @> bg-primary text-light<@ end @>"
-									>
-										@{ :filter }
-									</a>
-								<@ end @>
-							</div>
-						</div>
-						<@ if @{ ?search } @>
+				<# Filters #>
+				<section id="filters" class="am-block">
+					<div class="dropdown">
+						<button 
+						class="btn" 
+						data-toggle="dropdown" 
+						type="button" 
+						id="dropdown-filter" 
+						aria-haspopup="true" 
+						aria-expanded="false"
+						>
+							<@~ if @{ ?filter } ~@>
+								@{ ?filter }
+							<@~ else ~@>
+								@{ labelShowAll | def ('Show All') }
+							<@~ end ~@>
+							&nbsp;
+							<@ Automad/Bootstrap/Icon { 
+								icon: 'filter',
+								w: '1.0em',
+								h: '1.0em',
+								viewBox: '0 -2 14 16'
+							} @>
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdown-filter">
 							<a 
-							href="?<@ queryStringMerge { search: false } @>#filters" 
-							class="btn"
+							href="?<@ queryStringMerge { filter: false, page: 1 } @>#filters" 
+							class="dropdown-item<@ if not @{ ?filter } @> bg-primary text-light<@ end @>"
 							>
-								"@{ ?search }"&nbsp;&nbsp;✗
+								@{ labelShowAll | def ('Show All') }
 							</a>
-						<@ end @>
-					</section>
-					<# Pagelist #>
-					<@ if @{ checkboxHideThumbnails } @>
-						<@ blocks/pagelist/cards_text.php @>
-					<@ else @>
-						<@ blocks/pagelist/cards.php @>
+							<@ foreach in filters @>
+								<a 
+								href="?<@ queryStringMerge { filter: @{ :filter }, page: 1 } @>#filters" 
+								class="dropdown-item<@ if @{ :filter } = @{ ?filter } @> bg-primary text-light<@ end @>"
+								>
+									@{ :filter }
+								</a>
+							<@ end @>
+						</div>
+					</div>
+					<@ if @{ ?search } @>
+						<a 
+						href="?<@ queryStringMerge { search: false } @>#filters" 
+						class="btn"
+						>
+							"@{ ?search }"&nbsp;&nbsp;✗
+						</a>
 					<@ end @>
-					<# Pagination #>
-					<@ if @{ :paginationCount } > 1 @>
-						<nav class="my-20">
-							<ul class="pagination">
-								<@ if @{ ?page } > 1 @>
-									<li class="page-item">
-										<a href="?<@ queryStringMerge { page: @{ ?page | -1 } } @>" class="page-link">
-											<@ Automad/Bootstrap/Icon { icon: 'chevron-left' } @>
-										</a>
+				</section>
+				<# Pagelist #>
+				<@ if @{ checkboxHideThumbnails } @>
+					<@ blocks/pagelist/cards_text.php @>
+				<@ else @>
+					<@ blocks/pagelist/cards.php @>
+				<@ end @>
+				<# Pagination #>
+				<@ if @{ :paginationCount } > 1 @>
+					<nav class="am-block my-20">
+						<ul class="pagination">
+							<@ if @{ ?page } > 1 @>
+								<li class="page-item">
+									<a href="?<@ queryStringMerge { page: @{ ?page | -1 } } @>" class="page-link">
+										<@ Automad/Bootstrap/Icon { icon: 'chevron-left' } @>
+									</a>
+								</li>
+							<@ end @>
+							<@ for @{ ?page | -4 } to @{ ?page | +4 } @>
+								<@ if @{ :i } > 0 and @{ :i } <= @{ :paginationCount } @>
+									<li class="page-item<@ if @{ ?page | def(1) } = @{ :i } @> active<@ end @>">
+										<a 
+										href="?<@ queryStringMerge { page: @{ :i } } @>" 
+										class="page-link"
+										>@{:i}</a>
 									</li>
 								<@ end @>
-								<@ for @{ ?page | -4 } to @{ ?page | +4 } @>
-									<@ if @{ :i } > 0 and @{ :i } <= @{ :paginationCount } @>
-										<li class="page-item<@ if @{ ?page | def(1) } = @{ :i } @> active<@ end @>">
-											<a 
-											href="?<@ queryStringMerge { page: @{ :i } } @>" 
-											class="page-link"
-											>@{:i}</a>
-										</li>
-									<@ end @>
-								<@ end @>
-								<@ if @{ ?page } < @{ :paginationCount } @>
-									<li class="page-item">
-										<a href="?<@ queryStringMerge { page: @{ ?page | +1 } } @>" class="page-link">
-											<@ Automad/Bootstrap/Icon { icon: 'chevron-right' } @>
-										</a>
-									</li>
-								<@ end @>
-							</ul>
-						</nav>
-					<@ end @>
-				</div>
+							<@ end @>
+							<@ if @{ ?page } < @{ :paginationCount } @>
+								<li class="page-item">
+									<a href="?<@ queryStringMerge { page: @{ ?page | +1 } } @>" class="page-link">
+										<@ Automad/Bootstrap/Icon { icon: 'chevron-right' } @>
+									</a>
+								</li>
+							<@ end @>
+						</ul>
+					</nav>
+				<@ end @>
+			
 				<@ elements/footer_menu.php @>
 			</div>
 		</div>

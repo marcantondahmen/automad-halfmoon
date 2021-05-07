@@ -1,7 +1,7 @@
 <ul class="navbar-nav<@ if @{ :template | match('/sidebar/') } @> d-md-none<@ end @>">
 	<li class="nav-item">
 		<a 
-		class="nav-link pl-5"
+		class="nav-link"
 		onclick="halfmoon.toggleSidebar()"
 		>
 			<@ Automad/Bootstrap/Icon { 

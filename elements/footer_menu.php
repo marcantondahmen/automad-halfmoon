@@ -1,4 +1,4 @@
-<div class="blocks">
+<div class="am-block">
 	<@ prev_next.php @>
 	<footer class="my-20 py-10">
 		<hr class="my-20">
@@ -31,5 +31,8 @@
 			&copy @{ :now | dateFormat ('Y') } &mdash; 
 			<a href="/" class="text-muted">@{ sitename }</a>
 		</div>
+
+		@{ itemsFooter }
+		
 	</footer>
 </div>

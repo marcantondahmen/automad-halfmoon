@@ -6,24 +6,26 @@
 		<div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
 		<@ elements/navbar.php @>
 		<@ elements/sidebar.php @>
-		<div class="content-wrapper">
-			<div class="container">
-				<div class="row">
-					<@ if @{ checkboxHideTableOfContents } @>
-						<div class="col py-20">
+		<div class="content-wrapper pt-10">
+			<div class="row">
+				<@ if @{ checkboxHideTableOfContents } @>
+					<div class="col py-20">
+						<div class="container">
 							<@ elements/content.php @>
 							<@ elements/footer_menu.php @>
 						</div>
-					<@ else @>
-						<div class="col-xl-9 py-20">
+					</div>
+				<@ else @>
+					<div class="col-xl-9 py-20">
+						<div class="container">
 							<@ elements/content.php @>
 							<@ elements/footer_menu.php @>
 						</div>
-						<div class="col-lg-3 py-5 d-none d-xl-flex">
-							<@ elements/toc.php @>
-						</div>
-					<@ end @>
-				</div>
+					</div>
+					<div class="col-lg-3 d-none d-xl-flex">
+						<@ elements/toc.php @>
+					</div>
+				<@ end @>
 			</div>
 		</div>
 	</div>

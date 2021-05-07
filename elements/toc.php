@@ -26,12 +26,14 @@ HTML;
 
 if ($output) { ?>
 
-	<div class="position-fixed ml-20 sidebar-menu">
-		<div class="font-weight-medium pb-20 pt-5">
-			@{ tableOfContentsTitle | def ('On this page') }
-		</div>
-		<div class="border-left pl-10 d-flex flex-column">
-			<?php echo $output; ?>
+	<div class="ml-20 sidebar-menu">
+		<div class="position-sticky top-0">
+			<div class="font-weight-medium pb-20">
+				@{ tableOfContentsTitle | def ('On this page') }
+			</div>
+			<div class="border-left pl-10 d-flex flex-column">
+				<?php echo $output; ?>
+			</div>
 		</div>
 	</div>
 
