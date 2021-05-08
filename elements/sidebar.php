@@ -53,7 +53,8 @@
 		<@ end @>
 		<# Children #>
 		<@~ newPagelist {
-			type: 'children'
+			type: 'children',
+			context: @{ url | def ('/') }
 		} @>
 		<@~ if @{ :pagelistCount } @>
 			<@ if @{ :level } @>
