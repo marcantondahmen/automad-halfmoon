@@ -2,6 +2,9 @@
 	<div 
 	class="page-wrapper with-navbar with-sidebar with-transitions" 	
 	data-sidebar-type="@{ :sidebarStyle | def('overlayed-all') }"
+	<@ if @{ :sidebarStyle | def('overlayed-all') } = 'overlayed-all' ~@>
+		data-sidebar-hidden="hidden"
+	<@~ end @>
 	>
 		<div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
 		<@ elements/navbar.php @>
