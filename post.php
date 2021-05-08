@@ -9,7 +9,7 @@
 		<div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
 		<@ elements/navbar.php @>
 		<@ elements/sidebar.php @>
-		<div class="content-wrapper pt-10">
+		<div class="content-wrapper overflow-x-hidden pt-10">
 			<div class="row">
 				<@ if @{ checkboxHideTableOfContents } @>
 					<div class="col py-20">
