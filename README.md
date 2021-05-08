@@ -1,6 +1,6 @@
 # Automad Halfmoon Theme
 
-A blog and documentation theme based on the flexible and highly customizable [Halfmoon](https://www.gethalfmoon.com) framework. Check out the demo page [here](https://halfmoon.dev.automad.org).
+A blog and documentation theme based on the flexible and highly customizable [Halfmoon](https://www.gethalfmoon.com) framework.
 
 ![](https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/halfmoon/post-light.png)
 
