@@ -2,7 +2,7 @@
 
 A blog and documentation theme based on the flexible and highly customizable [Halfmoon](https://www.gethalfmoon.com) framework.
 
-![](https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/halfmoon/post-light.png)
+![](https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/halfmoon/post-sidebar-dark.png)
 
 - [Templates](#templates)
 - [Pagelist Blocks](#pagelist-blocks)
@@ -29,7 +29,7 @@ There are three included templates for pagelist blocks.
 | Cards Text | Basically the same as the **Cards** template just without an image |
 | List | A simple list of horizontal  cards including title, date, tags and the first paragraph of a page |
 
-![](https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/halfmoon/post-sidebar-dark.png)
+![](https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/halfmoon/post-light.png)
 
 ## Customization
 
