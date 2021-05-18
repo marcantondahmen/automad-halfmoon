@@ -4,7 +4,7 @@ Expose variable to dashboard.
 #>
 <@ newPagelist {
 	excludeHidden: false,
-	match: '{"checkboxShowInNavbar": "/./"}'
+	match: '{"checkboxShowInNavbar": "/[^0]+/"}'
 } @>
 <ul class="navbar-nav d-none d-md-flex<@ if @{ checkboxNavbarMenuRight } @> ml-auto<@ else @> mr-auto<@ end @>">
 	<@ foreach in pagelist @>

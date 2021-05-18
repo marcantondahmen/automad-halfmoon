@@ -18,7 +18,7 @@
 		#>
 		<@ newPagelist { 
 			excludeHidden: false,
-			match: '{ "checkboxShowInFooter": "/.+/" }'
+			match: '{ "checkboxShowInFooter": "/[^0]+/" }'
 		} ~@>
 		<@ if @{ :pagelistCount } @>
 			<div class="sidebar-menu mx-0 px-0 my-20 pt-20">
