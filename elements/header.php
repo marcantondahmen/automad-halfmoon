@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="@{ :template | sanitize }">
+<html lang="en" class="@{ :template | def(@{ template }) | sanitize }">
 <head>
 	<# 
 	Make block variables show up in Dashboard:

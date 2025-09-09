@@ -1,4 +1,4 @@
-<ul class="navbar-nav<@ if @{ :template | match('/sidebar/') } @> d-md-none<@ end @>">
+<ul class="navbar-nav<@ if @{ :template | def(@{ template }) | match('/sidebar/') } @> d-md-none<@ end @>">
 	<li class="nav-item">
 		<a 
 		class="nav-link"
