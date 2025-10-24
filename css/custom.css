@@ -1,13 +1,12 @@
 :root {
-
 	--am-block-max-width: 60rem;
 	--am-block-margin-top: calc(1rem + 1em);
 	--am-container-padding: 1.5rem;
 	--am-flex-gap: 2rem;
 	--am-flex-min-block-width: 18rem;
 
-	--base-html-font-size: 80%; 
-	--base-html-font-size-1600: 90%; 
+	--base-html-font-size: 80%;
+	--base-html-font-size-1600: 90%;
 	--base-html-font-size-1920: 100%;
 
 	--container-width: 100%;
@@ -23,8 +22,17 @@
 	--navbar-brand-font-weight: 700;
 	--sidebar-width: 24rem;
 
-	--cards-margin: 1.5rem; 
+	--cards-margin: 1.5rem;
 
+	--am-border-color: rgba(128, 128, 128, 0.2);
+	--am-border-radius: 5px;
+	--am-border-width: 2px;
+
+	--am-table-cell-padding: 0.55em 0.7em 0.55em 0;
+	--am-table-border: none;
+	--am-table-border-horizontal: 1px solid var(--am-border-color);
+	--am-table-border-header-horizontal: 2px solid var(--am-border-color);
+	--am-table-heading-font-weight: 750;
 }
 
 am-stretched + am-stretched {
@@ -49,6 +57,11 @@ img {
 	font-size: 135%;
 }
 
+am-quote > figure > blockquote {
+	border: none !important;
+	padding: 0 !important;
+}
+
 .cards {
 	margin-top: var(--am-block-margin-top);
 }
@@ -69,7 +82,7 @@ img {
 	height: 0;
 	overflow: hidden;
 	color: inherit !important;
-	background-color: rgba(128,128,128,0.05);
+	background-color: rgba(128, 128, 128, 0.05);
 }
 
 .card-teaser img,
@@ -110,3 +123,4 @@ img {
 .am-inpage-menu-button[href^="/"] {
 	color: #181818 !important;
 }
+
